@@ -4,7 +4,7 @@ export type CampersQueryParams = {
   page?: number;
   perPage?: number;
   location?: string;
-  form?: Form;
-  transmission?: Transmission;
-  engine?: Engine;
+  form?: Form | "";
+  transmission?: Transmission | "";
+  engine?: Engine | "";
 };
