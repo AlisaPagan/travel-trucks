@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import QueryProvider from "@/components/QueryProvider/QueryProvider";
+import Header from "@/components/UI/Header/Header";
 
 const interFont = Inter({
   variable: "--font-inter",
@@ -21,7 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={interFont.variable}>
       <body>
-        <QueryProvider>{children}</QueryProvider>
+        <QueryProvider>
+          <Header />
+          {children}
+        </QueryProvider>
       </body>
     </html>
   );

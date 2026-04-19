@@ -8,6 +8,7 @@ import { useState } from "react";
 import { CampersQueryParams, CatalogFilters } from "@/types";
 import Filters from "@/components/Catalog/Filters/Filters";
 import Button from "@/components/UI/Button/Button";
+import Loader from "@/components/UI/Loader/Loader";
 
 const initialFilters: CatalogFilters = {
   location: "",
@@ -63,40 +64,52 @@ export default function CampersCatalog() {
     setFilters({ ...initialFilters });
   };
 
-  if (isLoading) return <p>Loading...</p>;
+  if (isLoading) return <Loader fullPage />;
   if (isError) return <p>Something went wrong.</p>;
 
   const campersList = data?.pages.flatMap((page) => page.campers) ?? [];
 
   return (
-    <div>
-      <main>
-        <div className={`container ${styles.pageWrapper}`}>
-          <h1 className={styles.visHidden}>Campers Catalog</h1>
-          <Filters
-            draftFilters={draftFilters}
-            setDraftFilters={setDraftFilters}
-            handleFilterSubmit={handleFilterSubmit}
-            resetFiltersHandler={resetFiltersHandler}
-          />
-          <div className={styles.contentWrapper}>
-            {campersList.map((camper) => (
-              <CamperCard key={camper.id} camper={camper} />
-            ))}
+    <main>
+      <div className={`container ${styles.pageWrapper}`}>
+        <h1 className={styles.visHidden}>Campers Catalog</h1>
+        <Filters
+          draftFilters={draftFilters}
+          setDraftFilters={setDraftFilters}
+          handleFilterSubmit={handleFilterSubmit}
+          resetFiltersHandler={resetFiltersHandler}
+        />
+        <div className={styles.contentWrapper}>
+          {campersList.length > 0 ? (
+            campersList.map((camper, index) => (
+              <CamperCard
+                key={camper.id}
+                camper={camper}
+                eagerImage={index === 0}
+              />
+            ))
+          ) : (
+            <div className={styles.emptyState}>
+              <h2 className={styles.emptyTitle}>Sorry, no campers found</h2>
+              <p className={styles.emptyText}>
+                Try changing or resetting your selected filters to see more
+                results.
+              </p>
+            </div>
+          )}
 
-            {hasNextPage && (
-              <Button
-                className={styles.loadMoreBtn}
-                variant="secondary"
-                type="button"
-                onClick={fetchNextPage}
-              >
-                {isFetchingNextPage ? "Loading..." : "Load more"}
-              </Button>
-            )}
-          </div>
+          {hasNextPage && (
+            <Button
+              className={styles.loadMoreBtn}
+              variant="secondary"
+              type="button"
+              onClick={fetchNextPage}
+            >
+              {isFetchingNextPage ? "Loading..." : "Load more"}
+            </Button>
+          )}
         </div>
-      </main>
-    </div>
+      </div>
+    </main>
   );
 }

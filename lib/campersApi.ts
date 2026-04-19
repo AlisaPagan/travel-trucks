@@ -35,7 +35,11 @@ export async function fetchCamperById(
   camperId: string,
 ): Promise<CamperDetails> {
   const { data } = await api.get<CamperDetails>(`/campers/${camperId}`);
-  return data;
+
+  return {
+    ...data,
+    reviews: data.reviews ?? [],
+  };
 }
 
 // ===== fetch reviews =====

@@ -1,0 +1,26 @@
+.pageWrapper {
+  padding-top: 48px;
+  padding-bottom: 52px;
+}
+.topBlock {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 88px;
+}
+
+.infoWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottomBlock {
+  display: flex;
+  gap: 48px;
+}
+
+.title {
+  color: var(--black);
+  margin-bottom: 24px;
+}

@@ -1,4 +1,5 @@
 import { CamperImage } from "./camperImage";
+import { Review } from "./review";
 import { Amenity, Engine, Form, Transmission } from "./unions";
 
 export type CamperDetails = {
@@ -19,6 +20,7 @@ export type CamperDetails = {
   engine: Engine;
   amenities: Amenity[];
   gallery: CamperImage[];
+  reviews: Review[];
   createdAt: string;
   updatedAt: string;
 };

@@ -7,9 +7,10 @@ import Link from "next/link";
 
 type CamperCardProps = {
   camper: CamperListItem;
+  eagerImage?: boolean;
 };
 
-function CamperCard({ camper }: CamperCardProps) {
+function CamperCard({ camper, eagerImage = false }: CamperCardProps) {
   const starClassName =
     camper.rating > 0 ? styles.starFilled : styles.starEmpty;
   return (
@@ -21,6 +22,8 @@ function CamperCard({ camper }: CamperCardProps) {
           alt={camper.name}
           width={219}
           height={240}
+          priority={eagerImage}
+          loading={eagerImage ? "eager" : "lazy"}
         />
       </div>
       <div className={styles.contentBlock}>
@@ -63,7 +66,7 @@ function CamperCard({ camper }: CamperCardProps) {
             </li>
           </ul>
         </div>
-        <Link href={`/catalog/${camper.id}`}>
+        <Link href={`/catalog/${camper.id}`} target="_blank" rel="noreferrer">
           <Button className={styles.cardBtn} variant="primary">
             Show more
           </Button>

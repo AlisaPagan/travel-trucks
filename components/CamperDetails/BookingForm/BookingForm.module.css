@@ -1,0 +1,87 @@
+.formCard {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border: 1px solid var(--grey);
+  border-radius: 24px;
+  padding: 44px;
+  background-color: var(--white);
+  width: 641px;
+  justify-content: center;
+  height: auto;
+}
+
+.title {
+  font-size: 20px;
+  color: var(--black);
+}
+
+.text {
+  color: var(--dark-grey);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input {
+  width: 100%;
+  height: 60px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 18px;
+  background-color: var(--darken-white);
+  color: var(--black);
+}
+
+.input::placeholder {
+  color: var(--dark-grey);
+  font-size: 16px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--olive-green);
+}
+
+.inputError {
+  border-color: #d84343;
+}
+
+.fieldMessage {
+  color: #d84343;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.statusMessage {
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.successMessage {
+  color: #1f6b4f;
+  background-color: #eaf7ef;
+}
+
+.errorMessage {
+  color: #a63838;
+  background-color: #fdeeee;
+}
+
+.formButton {
+  width: 100%;
+  margin-top: 24px;
+
+  align-self: center;
+}

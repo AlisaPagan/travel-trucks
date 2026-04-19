@@ -6,7 +6,7 @@
   gap: 24px;
   background-color: var(--darken-white);
   border-radius: 16px;
-  width: 888px;
+  width: 100%;
 }
 
 .imageBlock {
