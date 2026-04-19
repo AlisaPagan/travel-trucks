@@ -1,0 +1,46 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  color: var(--white);
+  padding: 16px;
+}
+
+.primary {
+  background-color: var(--olive-green);
+  border: 1px solid transparent;
+  transition: background-color var(--transition);
+}
+
+.primary:hover,
+.primary:focus {
+  background-color: var(--olive-green-dark);
+}
+
+.secondary {
+  color: var(--black);
+  background-color: transparent;
+  border: 1px solid var(--grey);
+  transition: border-color var(--transition);
+}
+
+.secondary:hover,
+.secondary:focus,
+.withIcon:hover,
+.withIcon:focus {
+  border: 1px solid var(--olive-green-dark);
+}
+
+.withIcon {
+  gap: 4px;
+  padding: 16px 32px;
+  background-color: var(--white);
+  border: 1px solid var(--grey);
+}
+
+.closeIcon {
+  width: 24px;
+  height: 24px;
+}

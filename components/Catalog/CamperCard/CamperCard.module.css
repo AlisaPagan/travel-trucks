@@ -1,0 +1,137 @@
+.camperCardWrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 24px;
+  background-color: var(--darken-white);
+  border-radius: 16px;
+  width: 888px;
+}
+
+.imageBlock {
+  width: 219px;
+  height: 240px;
+  overflow: hidden;
+  border-radius: 16px;
+  flex-shrink: 0;
+}
+
+.camperImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.contentBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  min-width: 0;
+  max-width: 525px;
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.cardHeading {
+  color: var(--black);
+  flex: 1;
+  min-width: 0;
+}
+
+.price {
+  color: var(--black);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.3;
+  flex-shrink: 0;
+}
+
+.metaRow {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  gap: 16px;
+}
+
+.ratingBlock {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.details {
+  color: var(--black);
+}
+
+.starFilled {
+  fill: var(--yellow);
+  height: 16px;
+  width: 16px;
+}
+
+.starEmpty {
+  fill: var(--grey);
+  height: 16px;
+  width: 16px;
+}
+
+.locationBlock {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.iconLoc {
+  fill: var(--black);
+}
+
+.camperDescription {
+  margin: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  line-clamp: 1;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.featuresList {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.featureItem {
+  background-color: var(--light-grey);
+  padding: 12px 18px;
+  border-radius: 100px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  mix-blend-mode: multiply;
+}
+
+.iconFeat {
+  height: 20px;
+  width: 20px;
+}
+
+.featureText {
+  font-weight: 500;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.cardBtn {
+  width: 173px;
+}

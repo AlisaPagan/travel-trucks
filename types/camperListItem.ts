@@ -6,6 +6,7 @@ export type CamperListItem = {
   price: number;
   rating: number;
   location: string;
+  description: string;
   form: Form;
   length: string;
   width: string;

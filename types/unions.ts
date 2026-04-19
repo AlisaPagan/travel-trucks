@@ -11,3 +11,10 @@ export type Amenity =
   | "microwave"
   | "gas"
   | "water";
+export type IconName =
+  | "star"
+  | "location"
+  | "engine"
+  | "transmission"
+  | "form"
+  | "close";

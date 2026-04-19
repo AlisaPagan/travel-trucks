@@ -9,3 +9,4 @@ export type { BookingRequestResponse } from "./bookingRequestResponse";
 export type { Form, Transmission, Engine, Amenity } from "./unions";
 export type { CampersQueryParams } from "./campersQueryParams";
 export type { CatalogFilters } from "./catalogFilters";
+export * from "./filterProps";

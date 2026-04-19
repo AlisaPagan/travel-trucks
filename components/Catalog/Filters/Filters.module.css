@@ -1,0 +1,144 @@
+.filtersWrapper {
+  background-color: var(--darken-white);
+  border-radius: 20px;
+  padding: 24px;
+  max-width: 360px;
+}
+.filtersForm {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.locationWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 8px;
+}
+
+.searchLabel {
+  color: var(--dark-grey);
+}
+.searchField {
+  position: relative;
+  width: 100%;
+}
+.searchInput {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 20px 16px 48px;
+  width: 100%;
+  height: 56px;
+  border-radius: 12px;
+  border: none;
+  background-color: var(--white);
+  font-size: 16px;
+}
+.inputIcon {
+  color: var(--dark-grey);
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+.searchInput:focus,
+.searchInput:hover {
+  outline: none;
+}
+
+.locationWrapper:focus-within .inputIcon {
+  color: var(--black);
+}
+
+.searchInput::placeholder {
+  color: var(--dark-grey);
+  font-size: 16px;
+}
+.filtersTitle {
+  color: var(--black);
+}
+
+.filterGroupsWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 24px;
+}
+
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.radioGroupTitle {
+  color: var(--dark-grey);
+}
+
+.radioLabel {
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.radioBtn {
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--dark-grey);
+  border-radius: 50%;
+  background-color: transparent;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.radioBtn:checked {
+  border-color: var(--black);
+}
+
+.radioBtn::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform var(--transition);
+  background-color: var(--grey-blue);
+}
+
+.radioBtn:checked::before {
+  transform: scale(1);
+}
+
+.radioBtn:focus-visible {
+  outline: 2px solid var(--olive-green);
+  outline-offset: 2px;
+}
+
+.filterButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.filtersBtn {
+  width: 100%;
+}
