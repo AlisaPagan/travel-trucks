@@ -7,6 +7,6 @@ export type { Review } from "./review";
 export type { BookingRequest } from "./bookingRequest";
 export type { BookingRequestResponse } from "./bookingRequestResponse";
 export type { Form, Transmission, Engine, Amenity } from "./unions";
-export type { CampersQueryParams } from "./campersQueryParams";
+export type { CampersQueryParams } from "./CampersQueryParams";
 export type { CatalogFilters } from "./catalogFilters";
 export * from "./filterProps";
